@@ -1,0 +1,225 @@
+.reel {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem;
+  align-items: center;
+}
+
+.ilon-wrapper {
+  font-size: 0.625rem;
+  width: 24em;
+  height: 24em;
+  background: linear-gradient(to top, #08d65a, #2c6ceb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ilon-wrapper:active {
+  animation: clicked-swing 0.3s linear infinite;
+}
+
+@keyframes clicked-swing {
+  0%, 100% { transform: translate(0, 0); }
+  25%      { transform: translate(-0.4em, 0.2em); }
+  50%      { transform: translate(0.4em, -0.2em); }
+  75%      { transform: translate(-0.3em, -0.3em); }
+}
+
+.ilon {
+  width: 20em;
+  height: 20em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ilon__mask1 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ilon__pair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8em;
+  transition: opacity 1s ease;
+}
+
+.ilon__mask2,
+.ilon__mask3 {
+  height: 20em;
+  object-fit: contain;
+}
+
+/* mask2 — вверх-вниз */
+.ilon__mask2 {
+  animation: mask2-bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes mask2-bounce {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+
+  100% {
+    transform: translateY(-0.5em) scaleY(1.05);
+  }
+}
+
+/* mask3 — влево-вправо */
+.ilon__mask3 {
+  animation: mask3-swing 1s ease-in-out infinite alternate;
+}
+
+@keyframes mask3-swing {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+.on__curs {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
+  position: absolute;
+}
+
+.ilon:hover .ilon__pair {
+  display: none;
+}
+
+.ilon:hover .on__curs {
+  display: flex;
+}
+
+.mask5 {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: mask5-swing 2s ease-in-out infinite alternate;
+}
+
+@keyframes mask5-swing {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(4deg);
+  }
+}
+
+.oncurs__text {
+  position: absolute;
+  left: 10%;
+  top: 100%;
+  font-size: 1em; 
+  color: black;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.rocket {
+  width: 30%;
+  height: 30%;
+  animation: rocket-spiral 4s linear infinite;
+}
+
+@keyframes rocket-spiral {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+
+  15% {
+    transform: translate(9em, 1em) rotate(60deg);
+  }
+
+  25% {
+    transform: translate(12em, 2em) rotate(90deg);
+  }
+
+  35% {
+    transform: translate(14em, 6em) rotate(130deg);
+  }
+
+  50% {
+    transform: translate(7em, 12em) rotate(180deg);
+  }
+
+  65% {
+    transform: translate(4em, 10em) rotate(220deg);
+  }
+
+  85% {
+    transform: translate(0.5em, 8em) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(5em, 5em) rotate(360deg);
+  }
+}
+
+/* on click */
+.clicked__mask {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+.ilon:active .ilon__pair {
+  display: none;
+}
+
+.ilon:active .on__curs {
+  display: none;
+}
+
+.ilon:active .clicked__mask {
+  display: block;
+}
+
+.cl__finger {
+  position: absolute;
+  top: 9em;
+  left: 0;
+  animation: finger-swing 0.5s steps(2) infinite alternate;
+}
+
+@keyframes finger-swing {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+.cl__finger2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.clicked__text {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  font-size: 1em; /* = 10px */
+  color: black;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+}
