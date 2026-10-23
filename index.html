@@ -11,8 +11,8 @@
 
 <body>
 
-  <header class="header" id="top">
-    <a class="logo" href="#top" aria-label="RU WAVE, на главную">
+  <header class="header">
+    <a class="logo" href="index.html" aria-label="ERUSSIA, на главную">
       <span class="logo__icon" aria-hidden="true">
         <span class="logo__cup logo__cup--left"></span>
         <span class="logo__cup logo__cup--right"></span>
@@ -21,10 +21,9 @@
     </a>
 
     <nav aria-label="Основное меню">
-      <a href="#artists">Артисты</a>
-      <a href="#releases">Релизы</a>
-      <a href="#events">Афиша</a>
-      <a href="#about">О проекте</a>
+      <a href="index.html" aria-current="page">Главная</a>
+      <a href="artists.html">Артисты</a>
+      <a href="festivals.html">Фестивали</a>
     </nav>
   </header>
 
@@ -35,157 +34,92 @@
       <div class="sec__content">
         <div class="hero__text">
           <p class="hero__label">// ЭЛЕКТРОННАЯ СЦЕНА РОССИИ</p>
-          <h1>АРТИСТЫ РОССИЙСКОЙ ЭЛЕКТРОНИКИ</h1>
-          <p>Каталог артистов, релизов и вечеринок: техно, хаус, синтвейв, эмбиент. [ВАШ ТЕКСТ-ПРИЗЫВ]</p>
-          <a class="btn" href="#artists">СМОТРЕТЬ АРТИСТОВ</a>
+          <h1>РОССИЙСКАЯ ЭЛЕКТРОНИКА СЕГОДНЯ</h1>
+          <p>[КОРОТКОЕ ВСТУПЛЕНИЕ: О ЧЁМ САЙТ И ЧТО ЗДЕСЬ МОЖНО НАЙТИ]</p>
+          <div class="hero__actions">
+            <a class="btn" href="artists.html">АРТИСТЫ</a>
+            <a class="btn" href="festivals.html">ФЕСТИВАЛИ</a>
+          </div>
         </div>
-        <div class="hero__photo">[ФОТО АРТИСТА НЕДЕЛИ]</div>
+        <div class="hero__photo">[ФОТО / ИЛЛЮСТРАЦИЯ]</div>
       </div>
     </section>
 
-    <!-- Артисты -->
-    <section class="sec" id="artists">
-      <h2 class="sec__title">АРТИСТЫ</h2>
+    <!-- Что это -->
+    <section class="sec">
+      <h2 class="sec__title">ЧТО ТАКОЕ РОССИЙСКАЯ ЭЛЕКТРОННАЯ СЦЕНА</h2>
       <div class="sec__content">
-        <ul class="cards">
-          <li class="card">
-            <a href="#">
-              <div class="card__photo">[ФОТО]</div>
-              <h3 class="card__name">[ИМЯ АРТИСТА]</h3>
-              <p class="card__genre">[жанр]</p>
-            </a>
+        <p class="sec__text">[АБЗАЦ 1: ОПРЕДЕЛЕНИЕ, ЧТО ВХОДИТ В СЦЕНУ]</p>
+        <p class="sec__text">[АБЗАЦ 2: ГЛАВНЫЕ ГОРОДА И ПЛОЩАДКИ]</p>
+      </div>
+    </section>
+
+    <!-- История развития -->
+    <section class="sec">
+      <h2 class="sec__title">КАК РАЗВИВАЛАСЬ СЦЕНА</h2>
+      <div class="sec__content">
+        <ol class="timeline">
+          <li class="timeline__item">
+            <span class="timeline__year">[ГОДЫ]</span>
+            <div class="timeline__body">
+              <h3 class="timeline__title">[НАЗВАНИЕ ЭТАПА]</h3>
+              <p>[ЧТО ПРОИСХОДИЛО: АРТИСТЫ, КЛУБЫ, РЕЛИЗЫ]</p>
+            </div>
           </li>
-          <li class="card">
-            <a href="#">
-              <div class="card__photo">[ФОТО]</div>
-              <h3 class="card__name">[ИМЯ АРТИСТА]</h3>
-              <p class="card__genre">[жанр]</p>
-            </a>
+          <li class="timeline__item">
+            <span class="timeline__year">[ГОДЫ]</span>
+            <div class="timeline__body">
+              <h3 class="timeline__title">[НАЗВАНИЕ ЭТАПА]</h3>
+              <p>[ЧТО ПРОИСХОДИЛО: АРТИСТЫ, КЛУБЫ, РЕЛИЗЫ]</p>
+            </div>
           </li>
-          <li class="card">
-            <a href="#">
-              <div class="card__photo">[ФОТО]</div>
-              <h3 class="card__name">[ИМЯ АРТИСТА]</h3>
-              <p class="card__genre">[жанр]</p>
-            </a>
+          <li class="timeline__item">
+            <span class="timeline__year">[ГОДЫ]</span>
+            <div class="timeline__body">
+              <h3 class="timeline__title">[НАЗВАНИЕ ЭТАПА]</h3>
+              <p>[ЧТО ПРОИСХОДИЛО: АРТИСТЫ, КЛУБЫ, РЕЛИЗЫ]</p>
+            </div>
           </li>
-          <li class="card">
-            <a href="#">
-              <div class="card__photo">[ФОТО]</div>
-              <h3 class="card__name">[ИМЯ АРТИСТА]</h3>
-              <p class="card__genre">[жанр]</p>
-            </a>
+          <li class="timeline__item">
+            <span class="timeline__year">[ГОДЫ]</span>
+            <div class="timeline__body">
+              <h3 class="timeline__title">[НАЗВАНИЕ ЭТАПА]</h3>
+              <p>[ЧТО ПРОИСХОДИЛО: АРТИСТЫ, КЛУБЫ, РЕЛИЗЫ]</p>
+            </div>
           </li>
-          <li class="card">
-            <a href="#">
-              <div class="card__photo">[ФОТО]</div>
-              <h3 class="card__name">[ИМЯ АРТИСТА]</h3>
-              <p class="card__genre">[жанр]</p>
-            </a>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Жанры -->
+    <section class="sec">
+      <h2 class="sec__title">ЖАНРЫ И НАПРАВЛЕНИЯ</h2>
+      <div class="sec__content">
+        <ul class="facts">
+          <li class="fact">
+            <h3 class="fact__title">[ЖАНР]</h3>
+            <p class="fact__text">[КРАТКО: ЧЕМ ХАРАКТЕРЕН, КТО ИГРАЕТ]</p>
           </li>
-          <li class="card">
-            <a href="#">
-              <div class="card__photo">[ФОТО]</div>
-              <h3 class="card__name">[ИМЯ АРТИСТА]</h3>
-              <p class="card__genre">[жанр]</p>
-            </a>
+          <li class="fact">
+            <h3 class="fact__title">[ЖАНР]</h3>
+            <p class="fact__text">[КРАТКО: ЧЕМ ХАРАКТЕРЕН, КТО ИГРАЕТ]</p>
+          </li>
+          <li class="fact">
+            <h3 class="fact__title">[ЖАНР]</h3>
+            <p class="fact__text">[КРАТКО: ЧЕМ ХАРАКТЕРЕН, КТО ИГРАЕТ]</p>
+          </li>
+          <li class="fact">
+            <h3 class="fact__title">[ЖАНР]</h3>
+            <p class="fact__text">[КРАТКО: ЧЕМ ХАРАКТЕРЕН, КТО ИГРАЕТ]</p>
           </li>
         </ul>
-      </div>
-    </section>
-
-    <!-- Релизы -->
-    <section class="sec" id="releases">
-      <h2 class="sec__title">НОВЫЕ РЕЛИЗЫ</h2>
-      <div class="sec__content">
-        <ul class="releases">
-          <li class="release">
-            <a href="#">
-              <div class="release__cover"></div>
-              <div class="release__info">
-                <h3 class="release__title">[НАЗВАНИЕ РЕЛИЗА]</h3>
-                <p class="release__artist">[артист]</p>
-              </div>
-              <span class="release__year">[ГОД]</span>
-            </a>
-          </li>
-          <li class="release">
-            <a href="#">
-              <div class="release__cover"></div>
-              <div class="release__info">
-                <h3 class="release__title">[НАЗВАНИЕ РЕЛИЗА]</h3>
-                <p class="release__artist">[артист]</p>
-              </div>
-              <span class="release__year">[ГОД]</span>
-            </a>
-          </li>
-          <li class="release">
-            <a href="#">
-              <div class="release__cover"></div>
-              <div class="release__info">
-                <h3 class="release__title">[НАЗВАНИЕ РЕЛИЗА]</h3>
-                <p class="release__artist">[артист]</p>
-              </div>
-              <span class="release__year">[ГОД]</span>
-            </a>
-          </li>
-          <li class="release">
-            <a href="#">
-              <div class="release__cover"></div>
-              <div class="release__info">
-                <h3 class="release__title">[НАЗВАНИЕ РЕЛИЗА]</h3>
-                <p class="release__artist">[артист]</p>
-              </div>
-              <span class="release__year">[ГОД]</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Афиша -->
-    <section class="sec" id="events">
-      <h2 class="sec__title">АФИША</h2>
-      <div class="sec__content">
-        <ul class="events">
-          <li class="event">
-            <a href="#">
-              <time class="event__date">[ДАТА]</time>
-              <h3 class="event__title">[НАЗВАНИЕ ВЕЧЕРИНКИ]</h3>
-              <p class="event__place">[КЛУБ, ГОРОД]</p>
-            </a>
-          </li>
-          <li class="event">
-            <a href="#">
-              <time class="event__date">[ДАТА]</time>
-              <h3 class="event__title">[НАЗВАНИЕ ВЕЧЕРИНКИ]</h3>
-              <p class="event__place">[КЛУБ, ГОРОД]</p>
-            </a>
-          </li>
-          <li class="event">
-            <a href="#">
-              <time class="event__date">[ДАТА]</time>
-              <h3 class="event__title">[НАЗВАНИЕ ВЕЧЕРИНКИ]</h3>
-              <p class="event__place">[КЛУБ, ГОРОД]</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- О проекте -->
-    <section class="sec" id="about">
-      <h2 class="sec__title">О ПРОЕКТЕ</h2>
-      <div class="sec__content">
-        <p>Сайт собирает артистов российской электронной сцены в одном месте: кто играет, что выпускает и где выступит.
-          [РАССКАЖИТЕ О ПРОЕКТЕ]</p>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <span class="footer__logo">RU WAVE</span>
+    <span class="footer__logo">ERUSSIA</span>
     <ul class="footer__links">
       <li><a href="#">[Telegram]</a></li>
       <li><a href="#">[VK]</a></li>
