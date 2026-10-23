@@ -1,9 +1,12 @@
 :root {
-  --head: #ff00bf;
-  --bg: #1fff48;
-  --sec1: #ff00b3;
-  --sec2: #9d006e;
-  --sec3: #680048;
+  --head: #1f3bff;
+  --bg: #f2f6ff;
+  --sec1: #7fd4ff;
+  --sec2: #3d7bff;
+  --sec3: #1a2fa8;
+  --accent: #ffe600;
+  --text: #0a1030;
+  --white: #ffffff;
 }
 
 *,
@@ -21,92 +24,422 @@
 html,
 body {
   margin: 0;
-  color: #ffffff;
-  font-family: "Press", sans-serif;
+  color: var(--text);
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
 }
 
 body {
   background: var(--bg);
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+nav a,
+.btn,
+.logo__text,
+.footer__logo,
+.hero__label,
+.card__photo,
+.hero__photo,
+.release__year,
+.event__date {
+  font-family: "Press", sans-serif;
+  line-height: 1.6;
+}
+
+/* ---------- Шапка ---------- */
+
 .header {
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  height: 4rem;
   background: var(--head);
+  border-bottom: 5px solid var(--text);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding: 1rem 5%;
+  z-index: 100;
+}
+
+.logo {
   display: flex;
   align-items: center;
-  justify-content: right;
-  padding-right: 10em;
-  z-index: 100;
+  gap: 0.875rem;
+  color: var(--white);
+}
+
+.logo__icon {
+  display: block;
+  flex: none;
+}
+
+.logo__text {
+  font-size: 1rem;
 }
 
 nav {
   display: flex;
-  gap: 6rem;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
 }
 
 nav a {
-  text-decoration: none;
   font-size: 0.75rem; /* 12px */
-  color: #ffffff;
-  transition: text-shadow 0.2s ease, color 0.2s ease;
+  color: var(--white);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 nav a:hover,
 nav a:focus-visible {
-  color: #ffffff;
-  text-shadow:
-    0 0 0.3rem #ffffff,
-    0 0 0.8rem var(--bg);
+  color: var(--accent);
+  text-shadow: 0 0 0.8rem var(--accent);
 }
+
+/* ---------- Секции (стопка из трёх слоёв) ---------- */
 
 .sec {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 80%;
-  height: 25rem;
-  margin: 5% auto 0;
+  min-height: 25rem;
+  margin: 5rem auto 0;
+  padding: 2.5rem 3rem 3rem;
   background: var(--sec1);
-}
-
-.sec::before,
-.sec::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 5px solid #000000;
-  z-index: -2;
-}
-
-.sec::before {
-  transform: translate(-15px, 15px);
-  background: var(--sec2);
-  z-index: -3;
-}
-
-.sec::after {
-  transform: translate(-30px, 30px);
-  background: var(--sec3);
-  z-index: -4;
+  border: 5px solid var(--text);
+  box-shadow:
+    -15px 15px 0 0 var(--sec2),
+    -15px 15px 0 5px var(--text),
+    -30px 30px 0 0 var(--sec3),
+    -30px 30px 0 5px var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  scroll-margin-top: 6rem; 
 }
 
 .sec__title {
-  position: absolute;
-  top: 2em;
-  /* от шрифта заголовка, как и было */
-  left: 3em;
-  margin: 0;
-  font-size: 0.875rem;
-  /* 14px */
+  font-size: 0.875rem; /* 14px */
 }
 
 .sec__content {
+  width: 100%;
+}
+
+.sec--hero {
+  justify-content: center;
+}
+
+.sec--hero .sec__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.hero__text {
+  flex: 1 1 24rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.hero__label {
+  font-size: 0.6875rem; /* 11px */
+}
+
+.sec--hero h1 {
+  font-size: 1.75rem; /* 28px */
+}
+
+.hero__text p:not(.hero__label) {
+  font-size: 1.125rem;
+  max-width: 32rem;
+}
+
+.hero__photo {
+  flex: 0 1 18rem;
+  min-width: 14rem;
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.6875rem;
+  color: var(--white);
+  background: var(--sec2);
+  border: 5px solid var(--text);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.75rem;
+  color: var(--text);
+  background: var(--accent);
+  border: 5px solid var(--text);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 var(--text);
+}
+
+/* ---------- Артисты ---------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--white);
+  border: 5px solid var(--text);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--text);
+}
+
+.card a {
+  display: block;
+  height: 100%;
+}
+
+.card__photo {
+  height: 9.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  color: var(--white);
+  background: var(--head);
+  border-bottom: 5px solid var(--text);
+}
+
+.card:nth-child(3n + 2) .card__photo {
+  background: var(--sec2);
+}
+
+.card:nth-child(3n) .card__photo {
+  background: var(--sec3);
+}
+
+.card__name {
+  padding: 1rem 1rem 0.5rem;
+  font-size: 0.6875rem;
+}
+
+.card__genre {
+  padding: 0 1rem 1rem;
+  font-size: 0.9375rem;
+  color: var(--sec3);
+}
+
+/* ---------- Релизы ---------- */
+
+.releases {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.release {
+  background: var(--white);
+  border: 5px solid var(--text);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.release:hover,
+.release:focus-within {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--text);
+}
+
+.release a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+}
+
+.release__cover {
+  flex: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: var(--head);
+  border: 5px solid var(--text);
+}
+
+.release:nth-child(even) .release__cover {
+  background: var(--sec3);
+}
+
+.release__info {
+  flex: 1 1 12rem;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.release__title {
+  font-size: 0.6875rem;
+}
+
+.release__artist {
+  font-size: 0.9375rem;
+  color: var(--sec3);
+}
+
+.release__year {
+  font-size: 0.625rem;
+}
+
+/* ---------- Афиша ---------- */
+
+.events {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+}
+
+.event {
+  background: var(--white);
+  border: 5px solid var(--text);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.event:hover,
+.event:focus-within {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--text);
+}
+
+.event a {
+  display: block;
+  height: 100%;
+}
+
+.event__date {
+  display: block;
+  padding: 1rem;
+  font-size: 0.75rem;
+  background: var(--accent);
+  border-bottom: 5px solid var(--text);
+}
+
+.event__title {
+  padding: 1rem 1rem 0.5rem;
+  font-size: 0.6875rem;
+}
+
+.event__place {
+  padding: 0 1rem 1rem;
+  font-size: 0.9375rem;
+  color: var(--sec3);
+}
+
+/* ---------- О проекте ---------- */
+
+#about .sec__content p {
+  max-width: 48rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+/* ---------- Футер ---------- */
+
+.footer {
+  margin-top: 6.5rem;
+  padding: 2rem 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  color: var(--white);
+  background: var(--text);
+}
+
+.footer__logo {
+  font-size: 0.6875rem;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+}
+
+.footer__links a {
+  font-size: 0.9375rem;
+  color: var(--sec1);
+}
+
+.footer__links a:hover,
+.footer__links a:focus-visible {
+  color: var(--accent);
+}
+
+/* ---------- Фокус для клавиатуры ---------- */
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Телефон ---------- */
+
+@media (max-width: 700px) {
+  .sec {
+    width: 88%;
+    padding: 1.5rem 1.25rem 2rem;
+    margin-top: 4rem;
+    box-shadow:
+      -8px 8px 0 0 var(--sec2),
+      -8px 8px 0 5px var(--text),
+      -16px 16px 0 0 var(--sec3),
+      -16px 16px 0 5px var(--text);
+  }
+
+  .sec--hero h1 {
+    font-size: 1.25rem;
+  }
+
+  nav {
+    gap: 0.75rem 1.5rem;
+  }
 }
