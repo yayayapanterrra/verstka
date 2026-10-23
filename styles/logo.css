@@ -1,0 +1,81 @@
+.logo__icon {
+    --size: 2rem;
+    position: relative;
+    display: block;
+    flex: none;
+    width: var(--size);
+    height: var(--size);
+    font-size: var(--size);
+}
+
+/* дуга */
+.logo__icon::before {
+    content: "";
+    position: absolute;
+    left: 0.12em;
+    top: 0.06em;
+    width: 0.76em;
+    height: 0.52em;
+    box-sizing: border-box;
+    border: 0.1em solid var(--text);
+    border-bottom: 0;
+    border-radius: 0.38em 0.38em 0 0;
+}
+
+/* чашки наушников */
+.logo__cup {
+    position: absolute;
+    top: 0.5em;
+    width: 0.26em;
+    height: 0.35em;
+    box-sizing: border-box;
+    background: var(--accent);
+    border: 0.06em solid var(--text);
+    border-radius: 0.08em;
+    transform-origin: center;
+    will-change: transform;   /* чашка рисуется один раз, а потом только масштабируется */
+}
+
+.logo__cup--left {
+    left: 0.04em;
+}
+
+.logo__cup--right {
+    right: 0.04em;
+}
+
+/* динамик внутри чашки */
+.logo__cup::after {
+    content: "";
+    position: absolute;
+    top: 0.07em;
+    bottom: 0.07em;
+    left: 0;
+    right: 0;
+    width: 0.1em;
+    margin-inline: auto;
+    background: var(--sec2);
+    border-radius: 0.03em;
+}
+
+@keyframes logo-beat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        
+        transform: scale(1.1);
+    }
+}
+
+.logo:hover .logo__cup--left,
+.logo:focus-visible .logo__cup--left {
+    animation: logo-beat 0.5s ease-in-out infinite;
+}
+
+.logo:hover .logo__cup--right,
+.logo:focus-visible .logo__cup--right {
+    animation: logo-beat 0.5s ease-in-out infinite;
+}

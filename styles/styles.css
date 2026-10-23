@@ -119,7 +119,7 @@ nav a:focus-visible {
   text-shadow: 0 0 0.8rem var(--accent);
 }
 
-/* ---------- Секции (стопка из трёх слоёв) ---------- */
+/* Секции (стопка из трёх слоёв) */
 
 .sec {
   width: 80%;
@@ -212,7 +212,7 @@ nav a:focus-visible {
   box-shadow: 3px 3px 0 var(--text);
 }
 
-/* ---------- Артисты ---------- */
+/* Артисты */
 
 .cards {
   display: grid;
@@ -267,7 +267,7 @@ nav a:focus-visible {
   color: var(--sec3);
 }
 
-/* ---------- Релизы ---------- */
+/* Релизы */
 
 .releases {
   display: flex;
@@ -328,7 +328,7 @@ nav a:focus-visible {
   font-size: 0.625rem;
 }
 
-/* ---------- Афиша ---------- */
+/* Афиша */
 
 .events {
   display: grid;
@@ -372,7 +372,7 @@ nav a:focus-visible {
   color: var(--sec3);
 }
 
-/* ---------- О проекте ---------- */
+/* О проекте */
 
 #about .sec__content p {
   max-width: 48rem;
@@ -380,7 +380,7 @@ nav a:focus-visible {
   line-height: 1.7;
 }
 
-/* ---------- Футер ---------- */
+/* Футер */
 
 .footer {
   margin-top: 6.5rem;
@@ -414,14 +414,14 @@ nav a:focus-visible {
   color: var(--accent);
 }
 
-/* ---------- Фокус для клавиатуры ---------- */
+/*  Фокус для клавиатуры */
 
 a:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
 
-/* ---------- Телефон ---------- */
+/*  Адаптация */
 
 @media (max-width: 700px) {
   .sec {
