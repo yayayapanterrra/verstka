@@ -1,140 +1,223 @@
 <!doctype html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ERUSSIA — электронная сцена России</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/logo.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ERUSSIA — электронная сцена России</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/logo.css">
-  <link rel="stylesheet" href="styles/index.css">
-</head>
+  <body>
+    <header class="header">
+      <a class="logo" href="index.html" aria-label="ERUSSIA, на главную">
+        <span class="logo__icon" aria-hidden="true">
+          <span class="logo__cup logo__cup--left"></span>
+          <span class="logo__cup logo__cup--right"></span>
+        </span>
+        <span class="logo__text">ERUSSIA</span>
+      </a>
 
-<body>
+      <nav aria-label="Основное меню">
+        <a href="index.html" aria-current="page">Главная</a>
+        <a href="artists.html">Артисты</a>
+        <a href="festivals.html">Фестивали</a>
+      </nav>
+    </header>
 
-  <header class="header">
-    <a class="logo" href="index.html" aria-label="ERUSSIA, на главную">
-      <span class="logo__icon" aria-hidden="true">
-        <span class="logo__cup logo__cup--left"></span>
-        <span class="logo__cup logo__cup--right"></span>
-      </span>
-      <span class="logo__text">ERUSSIA</span>
-    </a>
-
-    <nav aria-label="Основное меню">
-      <a href="index.html" aria-current="page">Главная</a>
-      <a href="artists.html">Артисты</a>
-      <a href="festivals.html">Фестивали</a>
-    </nav>
-  </header>
-
-  <main>
-
-    <!-- Герой -->
-    <section class="sec sec--hero">
-      <div class="sec__content">
-        <div class="hero__text">
-          <p class="hero__label">// ЭЛЕКТРОННАЯ СЦЕНА РОССИИ</p>
-          <h1>РОССИЙСКАЯ ЭЛЕКТРОНИКА СЕГОДНЯ</h1>
-          <p>Техно, хаус, эмбиент, синтвейв: у нас давно есть своя электронная сцена, и она живее, чем кажется. Свои артисты, свои клубы, свои фестивали. Давай разберёмся, кто есть кто и с чего начать слушать.</p>
-          <div class="hero__actions">
-            <a class="btn" href="artists.html">АРТИСТЫ</a>
-            <a class="btn" href="festivals.html">ФЕСТИВАЛИ</a>
+    <main>
+      <!-- Герой -->
+      <section class="sec sec--hero">
+        <div class="sec__content">
+          <div class="hero__text">
+            <p class="hero__label">// ЭЛЕКТРОННАЯ СЦЕНА РОССИИ</p>
+            <h1>РОССИЙСКАЯ ЭЛЕКТРОНИКА СЕГОДНЯ</h1>
+            <p>
+              Техно, хаус, эмбиент, синтвейв: у нас давно есть своя электронная
+              сцена, и она живее, чем кажется. Свои артисты, свои клубы, свои
+              фестивали. Давай разберёмся, кто есть кто и с чего начать слушать.
+            </p>
+            <div class="hero__actions">
+              <a class="btn" href="artists.html">АРТИСТЫ</a>
+              <a class="btn" href="festivals.html">ФЕСТИВАЛИ</a>
+            </div>
+          </div>
+          <div class="hero__photo">
+            <img src="images/hero.webp" alt="Вечеринка Ствол 26" />
           </div>
         </div>
-        <div class="hero__photo">
-          <img src="images/hero.webp" alt="Вечеринка Ствол 26">
+      </section>
+
+      <!-- О чём сайт -->
+      <section class="sec">
+        <h2 class="sec__title">ЧТО ТАКОЕ РОССИЙСКАЯ ЭЛЕКТРОННАЯ СЦЕНА</h2>
+        <div class="sec__content">
+          <p class="sec__text">
+            Российская электронная сцена — это все, кто делает и любит
+            электронную музыку: артисты, диджеи, лейблы, организаторы вечеринок
+            и, конечно, слушатели. Тут есть всё: от танцевального техно и хауса
+            до тягучего эмбиента и ретро-синтвейва. Жанры разные, звучат
+            по-разному и собирают разную публику, но всех объединяет страсть к
+            экспериментам со звуком.
+          </p>
+          <p class="sec__text">
+            В каждом блоке ниже ты найдёшь короткую историю, пару фактов о том,
+            кто это и чем занимается, и фото с их вечеринок. Если зацепило, жми
+            на кнопку: там список артистов, с биографиями и выступлениями.
+            Слушай всё подряд или выбирай по звуку, а там как пойдёт: возможно,
+            один из них станет твоим новым любимым.
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- О чём сайт -->
-    <section class="sec">
-      <h2 class="sec__title">ЧТО ТАКОЕ РОССИЙСКАЯ ЭЛЕКТРОННАЯ СЦЕНА</h2>
-      <div class="sec__content">
-        <p class="sec__text">Российская электронная сцена — это все, кто
-           делает и любит электронную музыку: артисты, диджеи, лейблы, 
-           организаторы вечеринок и, конечно, слушатели. Тут есть всё: 
-           от танцевального техно и хауса до тягучего эмбиента и 
-           ретро-синтвейва. Жанры разные, звучат по-разному и собирают 
-           разную публику, но всех объединяет страсть к экспериментам со звуком.</p>
-        <p class="sec__text">В каждом блоке ниже ты найдёшь короткую 
-          историю, пару фактов о том, кто это и чем занимается, и 
-          фото с их вечеринок. Если зацепило, жми на кнопку: 
-          там список артистов, с биографиями и выступлениями. 
-          Слушай всё подряд или выбирай по звуку, а там как пойдёт: 
-          возможно, один из них станет твоим новым любимым.</p>
-      </div>
-    </section>
-
-    
-    <section class="sec" id="elephant-trunk">
-      <h2 class="sec__title">ELEPHANT TRUNK</h2>
-      <div class="sec__content label">
-        <figure class="label__photo">
-          <img src="images/elephant-trunk.webp" alt="Вечеринка лейбла Elephant Trunk" width="800" height="600" loading="lazy">
-          <figcaption>СЛОНЫ ПРОТИВ ЛОМАНЫЕ РИТМЫ 360: AIM F2F VIPAH DNB SET</figcaption>
-        </figure>
-        <div class="label__body">
-          <ul class="tags">
-            <li class="tag">Drum'n'Bass</li>
-            <li class="tag">Бренд обновлён в 2021</li>
-          </ul>
-          <p>Elephant Trunk — лейбл про драм-н-бейс. Старый импринт у ребят был ещё в 2017 году, но по-настоящему всё закрутилось в 2021-м: бренд обновили, а в мае устроили первую вечеринку под новым названием.</p>
-          <p>На лейбле выходят ozma, Tasha Baxter, Ryan Audley, Chillhomers, Onebyone и MAGE. А ещё у них свои вечеринки, например Label Night 2.0 и «Свежая Кровь».</p>
-          <a class="btn" href="elephant-trunk.html">АРТИСТЫ ЛЕЙБЛА</a>
+      <section class="sec" id="elephant-trunk">
+        <h2 class="sec__title">ELEPHANT TRUNK</h2>
+        <div class="sec__content label">
+          <figure class="label__photo">
+            <img
+              src="images/elephant-trunk.webp"
+              alt="Вечеринка лейбла Elephant Trunk"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <figcaption>
+              СЛОНЫ ПРОТИВ ЛОМАНЫЕ РИТМЫ 360: AIM F2F VIPAH DNB SET
+            </figcaption>
+          </figure>
+          <div class="label__body">
+            <ul class="tags">
+              <li class="tag">Drum'n'Bass</li>
+              <li class="tag">Бренд обновлён в 2021</li>
+            </ul>
+            <p>
+              Elephant Trunk — лейбл про драм-н-бейс. Старый импринт у ребят был
+              ещё в 2017 году, но по-настоящему всё закрутилось в 2021-м: бренд
+              обновили, а в мае устроили первую вечеринку под новым названием.
+            </p>
+            <p>
+              На лейбле выходят ozma, Tasha Baxter, Ryan Audley, Chillhomers,
+              Onebyone и MAGE. А ещё у них свои вечеринки, например Label Night
+              2.0 и «Свежая Кровь».
+            </p>
+            <a class="btn" href="elephant-trunk.html">АРТИСТЫ ЛЕЙБЛА</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    
-    <section class="sec" id="stvol">
-      <h2 class="sec__title">СТВОЛ</h2>
-      <div class="sec__content label label--reverse">
-        <figure class="label__photo">
-          <img src="images/stvol.jpg" alt="Вечеринка лейбла Ствол" width="800" height="600" loading="lazy">
-          <figcaption>[ПОДПИСЬ: ЧТО НА ФОТО, АВТОР]</figcaption>
-        </figure>
-        <div class="label__body">
-          <ul class="tags">
-            <li class="tag">С 2021 года</li>
-            <li class="tag">Основали Cream Soda</li>
-          </ul>
-          <p>«Ствол» запустили в 2021 году ребята из Cream Soda: Дима Нова и Илья Гадаев. По их словам, это не коммерческая контора, а тусовка единомышленников, которые помогают друг другу с промо, клипами и подачей.</p>
-          <p>Здесь выходят Cream Soda, «Лучший Друг», «Лауд», Ella и Lurmish. Жанры разные: от «умной электроники» до попа и хип-хопа.</p>
-          <a class="btn" href="stvol.html">АРТИСТЫ ЛЕЙБЛА</a>
+      <section class="sec" id="stvol">
+        <h2 class="sec__title">СТВОЛ</h2>
+        <div class="sec__content label label--reverse">
+          <figure class="label__photo">
+            <img
+              src="images/stvol.webp"
+              alt="Вечеринка лейбла Ствол"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <figcaption>ILYA GADAEV СТВОЛ х ОГНИ</figcaption>
+          </figure>
+          <div class="label__body">
+            <ul class="tags">
+              <li class="tag">С 2021 года</li>
+              <li class="tag">Основали Cream Soda</li>
+            </ul>
+            <p>
+              «Ствол» запустили в 2021 году ребята из Cream Soda: Дима Нова и
+              Илья Гадаев. По их словам, это не коммерческая контора, а тусовка
+              единомышленников, которые помогают друг другу с промо, клипами и
+              подачей.
+            </p>
+            <p>
+              Здесь выходят Cream Soda, «Лучший Друг», «Лауд», Ella и Lurmish.
+              Жанры разные: от «умной электроники» до попа и хип-хопа.
+            </p>
+            <a class="btn" href="stvol.html">АРТИСТЫ ЛЕЙБЛА</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    
-    <section class="sec" id="system108">
-      <h2 class="sec__title">SYSTEM 108</h2>
-      <div class="sec__content label">
-        <figure class="label__photo">
-          <img src="images/system108.jpg" alt="Вечеринка System 108" width="800" height="600" loading="lazy">
-          <figcaption>[ПОДПИСЬ: ЧТО НА ФОТО, АВТОР]</figcaption>
-        </figure>
-        <div class="label__body">
-          <ul class="tags">
-            <li class="tag">С 2015 года</li>
-            <li class="tag">Лейбл и промогруппа</li>
-          </ul>
-          <p>System 108 — лейбл и промогруппа, которую в 2015 году основал продюсер Евгений Машков. Тут выпускаются электронные музыканты: Errortica, Kito Jempere, Philipp Gorbachev, Simple Symmetry, Sputnik и другие.</p>
-          <p>Кроме релизов, они проводят шоукейсы System One Hundred and Eight, а ещё у них есть проект «Диско Клуб», который сделан вместе с фотостудией White Studios.</p>
-          <a class="btn" href="system108.html">АРТИСТЫ ЛЕЙБЛА</a>
+      <section class="sec" id="system108">
+        <h2 class="sec__title">SYSTEM 108</h2>
+        <div class="sec__content label">
+          <figure class="label__photo">
+            <img
+              src="images/system108.webp"
+              alt="Вечеринка System 108"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <figcaption>Errortica // New Star Camp 2025 // Live</figcaption>
+          </figure>
+          <div class="label__body">
+            <ul class="tags">
+              <li class="tag">С 2015 года</li>
+              <li class="tag">Лейбл и промогруппа</li>
+            </ul>
+            <p>
+              System 108 — лейбл и промогруппа, которую в 2015 году основал
+              продюсер Евгений Машков. Тут выпускаются электронные музыканты:
+              Errortica, Kito Jempere, Philipp Gorbachev, Simple Symmetry,
+              Sputnik и другие.
+            </p>
+            <p>
+              Кроме релизов, они проводят шоукейсы System One Hundred and Eight,
+              а ещё у них есть проект «Диско Клуб», который сделан вместе с
+              фотостудией White Studios.
+            </p>
+            <a class="btn" href="system108.html">АРТИСТЫ ЛЕЙБЛА</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-  
-    <section class="sec" id="gorkovskaya">
-      <h2 class="sec__title">СТАНЦИЯ МЕТРО ГОРЬКОВСКАЯ</h2>
-      <div class="sec__content label label--reverse">
-        <figure class="label__photo">
-          <img src="images/disko-klub.jpg" alt="Вечеринка Диско Клуба" width="800" height="600" loading="lazy">
-          <figcaption>[ПОДПИСЬ: ЧТО НА ФОТО, АВТОР]</figcaption>
-        </figure>
-        <div class="label__body">
-          <ul class="tags">
-            <li
+      <section class="sec" id="gorkovskaya">
+        <h2 class="sec__title">СТАНЦИЯ МЕТРО ГОРЬКОВСКАЯ</h2>
+        <div class="sec__content label">
+          <figure class="label__photo">
+            <img
+              src="images/stancia.webp"
+              alt="СТАНЦИЯ МЕТРО ГОРЬКОВСКАЯ / LA GRANDE FINALE 2025"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <figcaption>
+              СТАНЦИЯ МЕТРО ГОРЬКОВСКАЯ | STVOL.TV: НОВОГОДНЕЕ ЗАСТВОЛЬЕ 2026
+            </figcaption>
+          </figure>
+          <div class="label__body">
+            <ul class="tags">
+              <li class="tag">С 2021 года</li>
+              <li class="tag">Нижний Новгород</li>
+            </ul>
+            <p>
+              «Станция метро Горьковская» — это не станция, а компания диджеев
+              из Нижнего Новгорода: Макс Буяков, Саша Красов (DJ Kras) и Антон
+              Бардин. Всё началось в январе 2021 года с вечеринки, адрес которой
+              разослали по SMS: пришло человек триста.
+            </p>
+            <p>
+              Раньше они играли рэп, а теперь делают драм-н-бейс, UK garage и
+              брейкс. Выпускают музыку на своём лейбле GRK MUSIC, играют в
+              Москве и на фестивалях, а в 2026 году их сет в масках из
+              «Симпсонов» разлетелся по соцсетям.
+            </p>
+            <a class="btn" href="GRK.html">АРТИСТЫ ЛЕЙБЛА</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__logo">ERUSSIA</span>
+      <ul class="footer__links">
+        <li><a href="#">[Telegram]</a></li>
+        <li><a href="#">[VK]</a></li>
+        <li><a href="#">[Почта]</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

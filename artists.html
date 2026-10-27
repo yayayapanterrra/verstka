@@ -1,183 +1,260 @@
 <!doctype html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Артисты — ERUSSIA</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/logo.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Артисты — ERUSSIA</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/logo.css">
-</head>
+  <body>
+    <header class="header">
+      <a class="logo" href="index.html" aria-label="ERUSSIA, на главную">
+        <span class="logo__icon" aria-hidden="true">
+          <span class="logo__cup logo__cup--left"></span>
+          <span class="logo__cup logo__cup--right"></span>
+        </span>
+        <span class="logo__text">ERUSSIA</span>
+      </a>
 
-<body>
+      <nav aria-label="Основное меню">
+        <a href="index.html">Главная</a>
+        <a href="artists.html" aria-current="page">Артисты</a>
+        <a href="festivals.html">Фестивали</a>
+      </nav>
+    </header>
 
-  <header class="header">
-    <a class="logo" href="index.html" aria-label="ERUSSIA, на главную">
-      <span class="logo__icon" aria-hidden="true">
-        <span class="logo__cup logo__cup--left"></span>
-        <span class="logo__cup logo__cup--right"></span>
-      </span>
-      <span class="logo__text">ERUSSIA</span>
-    </a>
+    <main>
+      <!-- Лейблы и объединения -->
+      <section class="sec">
+        <h1 class="sec__title">АРТИСТЫ ПО ЛЕЙБЛАМ</h1>
+        <div class="sec__content">
+          <ul class="cards">
+            <li class="card">
+              <a href="elephant-trunk.html">
+                <div class="card__photo">
+                  <img
+                    src="images/elephant-trunk.jpg"
+                    alt="Вечеринка лейбла Elephant Trunk"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </div>
+                <h2 class="card__name">ELEPHANT TRUNK</h2>
+                <p class="card__genre">Drum'n'Bass</p>
+                <p class="card__text">
+                  ozma, Tasha Baxter, Ryan Audley, Chillhomers, Onebyone, MAGE
+                </p>
+              </a>
+            </li>
+            <li class="card">
+              <a href="stvol.html">
+                <div class="card__photo">
+                  <img
+                    src="images/stvol.jpg"
+                    alt="Вечеринка лейбла Ствол"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </div>
+                <h2 class="card__name">СТВОЛ</h2>
+                <p class="card__genre">Электроника, поп, хип-хоп</p>
+                <p class="card__text">
+                  Cream Soda, «Лучший Друг», «Лауд», Ella, Lurmish
+                </p>
+              </a>
+            </li>
+            <li class="card">
+              <a href="system108.html">
+                <div class="card__photo">
+                  <img
+                    src="images/system108.jpg"
+                    alt="Вечеринка System 108"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </div>
+                <h2 class="card__name">SYSTEM 108</h2>
+                <p class="card__genre">Электронная музыка</p>
+                <p class="card__text">
+                  Errortica, Kito Jempere, Philipp Gorbachev, Simple Symmetry,
+                  Sputnik и другие
+                </p>
+              </a>
+            </li>
+            <li class="card">
+              <a href="disko-klub.html">
+                <div class="card__photo">
+                  <img
+                    src="images/disko-klub.jpg"
+                    alt="Вечеринка Диско Клуба"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </div>
+                <h2 class="card__name">ДИСКО КЛУБ</h2>
+                <p class="card__genre">Электроника</p>
+                <p class="card__text">
+                  Mirele, Рудольд Страусов, Казускома, Глум, Tapenight
+                </p>
+              </a>
+            </li>
+            <li class="card">
+              <a href="gorkovskaya.html">
+                <div class="card__photo">
+                  <img
+                    src="images/gorkovskaya.jpg"
+                    alt="Вечеринка «Станции метро Горьковская»"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </div>
+                <h2 class="card__name">СТАНЦИЯ МЕТРО ГОРЬКОВСКАЯ</h2>
+                <p class="card__genre">Нижний Новгород</p>
+                <p class="card__text">
+                  Макс Буяков, DJ Kras, Антон Бардин, Call Me Ilya, camznaew
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <nav aria-label="Основное меню">
-      <a href="index.html">Главная</a>
-      <a href="artists.html" aria-current="page">Артисты</a>
-      <a href="festivals.html">Фестивали</a>
-    </nav>
-  </header>
+      <!-- Независимые артисты -->
+      <section class="sec">
+        <h2 class="sec__title">ДРУГИЕ АРТИСТЫ</h2>
+        <div class="sec__content">
+          <ul class="cards">
+            <li class="card">
+              <a href="artist.html">
+                <div class="card__photo">
+                  <img
+                    src="images/artist-biicla.jpg"
+                    alt="biicla"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="card__name">BIICLA</h3>
+                <p class="card__genre">[жанр] · [город]</p>
+                <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
+              </a>
+            </li>
+            <li class="card">
+              <a href="artist.html">
+                <div class="card__photo">
+                  <img
+                    src="images/artist-dj-stonik.jpg"
+                    alt="DJ Stonik"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="card__name">DJ STONIK</h3>
+                <p class="card__genre">[жанр] · [город]</p>
+                <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
+              </a>
+            </li>
+            <li class="card">
+              <a href="artist.html">
+                <div class="card__photo">
+                  <img
+                    src="images/artist-dk.jpg"
+                    alt="DK"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="card__name">DK</h3>
+                <p class="card__genre">[жанр] · [город]</p>
+                <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
+              </a>
+            </li>
+            <li class="card">
+              <a href="artist.html">
+                <div class="card__photo">
+                  <img
+                    src="images/artist-lida.jpg"
+                    alt="Lida"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="card__name">LIDA</h3>
+                <p class="card__genre">[жанр] · [город]</p>
+                <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
+              </a>
+            </li>
+            <li class="card">
+              <a href="artist.html">
+                <div class="card__photo">
+                  <img
+                    src="images/artist-it-alone.jpg"
+                    alt="It Alone"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="card__name">IT ALONE</h3>
+                <p class="card__genre">[жанр] · [город]</p>
+                <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
+              </a>
+            </li>
+            <li class="card">
+              <a href="artist.html">
+                <div class="card__photo">
+                  <img
+                    src="images/artist-ram.jpg"
+                    alt="RAM"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="card__name">RAM</h3>
+                <p class="card__genre">[жанр] · [город]</p>
+                <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
+              </a>
+            </li>
+            <li class="card">
+              <a href="artist.html">
+                <div class="card__photo">
+                  <img
+                    src="images/artist-joviee.jpg"
+                    alt="Joviee"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="card__name">JOVIEE</h3>
+                <p class="card__genre">[жанр] · [город]</p>
+                <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
-  <main>
-
-    <!-- Лейблы и объединения -->
-    <section class="sec">
-      <h1 class="sec__title">АРТИСТЫ ПО ЛЕЙБЛАМ</h1>
-      <div class="sec__content">
-        <ul class="cards">
-          <li class="card">
-            <a href="elephant-trunk.html">
-              <div class="card__photo">
-                <img src="images/elephant-trunk.jpg" alt="Вечеринка лейбла Elephant Trunk" width="400" height="300" loading="lazy">
-              </div>
-              <h2 class="card__name">ELEPHANT TRUNK</h2>
-              <p class="card__genre">Drum'n'Bass</p>
-              <p class="card__text">ozma, Tasha Baxter, Ryan Audley, Chillhomers, Onebyone, MAGE</p>
-            </a>
-          </li>
-          <li class="card">
-            <a href="stvol.html">
-              <div class="card__photo">
-                <img src="images/stvol.jpg" alt="Вечеринка лейбла Ствол" width="400" height="300" loading="lazy">
-              </div>
-              <h2 class="card__name">СТВОЛ</h2>
-              <p class="card__genre">Электроника, поп, хип-хоп</p>
-              <p class="card__text">Cream Soda, «Лучший Друг», «Лауд», Ella, Lurmish</p>
-            </a>
-          </li>
-          <li class="card">
-            <a href="system108.html">
-              <div class="card__photo">
-                <img src="images/system108.jpg" alt="Вечеринка System 108" width="400" height="300" loading="lazy">
-              </div>
-              <h2 class="card__name">SYSTEM 108</h2>
-              <p class="card__genre">Электронная музыка</p>
-              <p class="card__text">Errortica, Kito Jempere, Philipp Gorbachev, Simple Symmetry, Sputnik и другие</p>
-            </a>
-          </li>
-          <li class="card">
-            <a href="disko-klub.html">
-              <div class="card__photo">
-                <img src="images/disko-klub.jpg" alt="Вечеринка Диско Клуба" width="400" height="300" loading="lazy">
-              </div>
-              <h2 class="card__name">ДИСКО КЛУБ</h2>
-              <p class="card__genre">Электроника</p>
-              <p class="card__text">Mirele, Рудольд Страусов, Казускома, Глум, Tapenight</p>
-            </a>
-          </li>
-          <li class="card">
-            <a href="gorkovskaya.html">
-              <div class="card__photo">
-                <img src="images/gorkovskaya.jpg" alt="Вечеринка «Станции метро Горьковская»" width="400" height="300" loading="lazy">
-              </div>
-              <h2 class="card__name">СТАНЦИЯ МЕТРО ГОРЬКОВСКАЯ</h2>
-              <p class="card__genre">Нижний Новгород</p>
-              <p class="card__text">Макс Буяков, DJ Kras, Антон Бардин, Call Me Ilya, camznaew</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Независимые артисты -->
-    <section class="sec">
-      <h2 class="sec__title">ДРУГИЕ АРТИСТЫ</h2>
-      <div class="sec__content">
-        <ul class="cards">
-          <li class="card">
-            <a href="artist.html">
-              <div class="card__photo">
-                <img src="images/artist-biicla.jpg" alt="biicla" width="400" height="300" loading="lazy">
-              </div>
-              <h3 class="card__name">BIICLA</h3>
-              <p class="card__genre">[жанр] · [город]</p>
-              <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
-            </a>
-          </li>
-          <li class="card">
-            <a href="artist.html">
-              <div class="card__photo">
-                <img src="images/artist-dj-stonik.jpg" alt="DJ Stonik" width="400" height="300" loading="lazy">
-              </div>
-              <h3 class="card__name">DJ STONIK</h3>
-              <p class="card__genre">[жанр] · [город]</p>
-              <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
-            </a>
-          </li>
-          <li class="card">
-            <a href="artist.html">
-              <div class="card__photo">
-                <img src="images/artist-dk.jpg" alt="DK" width="400" height="300" loading="lazy">
-              </div>
-              <h3 class="card__name">DK</h3>
-              <p class="card__genre">[жанр] · [город]</p>
-              <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
-            </a>
-          </li>
-          <li class="card">
-            <a href="artist.html">
-              <div class="card__photo">
-                <img src="images/artist-lida.jpg" alt="Lida" width="400" height="300" loading="lazy">
-              </div>
-              <h3 class="card__name">LIDA</h3>
-              <p class="card__genre">[жанр] · [город]</p>
-              <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
-            </a>
-          </li>
-          <li class="card">
-            <a href="artist.html">
-              <div class="card__photo">
-                <img src="images/artist-it-alone.jpg" alt="It Alone" width="400" height="300" loading="lazy">
-              </div>
-              <h3 class="card__name">IT ALONE</h3>
-              <p class="card__genre">[жанр] · [город]</p>
-              <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
-            </a>
-          </li>
-          <li class="card">
-            <a href="artist.html">
-              <div class="card__photo">
-                <img src="images/artist-ram.jpg" alt="RAM" width="400" height="300" loading="lazy">
-              </div>
-              <h3 class="card__name">RAM</h3>
-              <p class="card__genre">[жанр] · [город]</p>
-              <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
-            </a>
-          </li>
-          <li class="card">
-            <a href="artist.html">
-              <div class="card__photo">
-                <img src="images/artist-joviee.jpg" alt="Joviee" width="400" height="300" loading="lazy">
-              </div>
-              <h3 class="card__name">JOVIEE</h3>
-              <p class="card__genre">[жанр] · [город]</p>
-              <p class="card__text">[КРАТКОЕ ОПИСАНИЕ]</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <span class="footer__logo">ERUSSIA</span>
-    <ul class="footer__links">
-      <li><a href="#">[Telegram]</a></li>
-      <li><a href="#">[VK]</a></li>
-      <li><a href="#">[Почта]</a></li>
-    </ul>
-  </footer>
-
-</body>
-
+    <footer class="footer">
+      <span class="footer__logo">ERUSSIA</span>
+      <ul class="footer__links">
+        <li><a href="#">[Telegram]</a></li>
+        <li><a href="#">[VK]</a></li>
+        <li><a href="#">[Почта]</a></li>
+      </ul>
+    </footer>
+  </body>
 </html>
