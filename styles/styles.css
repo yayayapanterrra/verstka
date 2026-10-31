@@ -51,6 +51,12 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 h1,
 h2,
 h3,
@@ -59,7 +65,6 @@ nav a,
 .logo__text,
 .footer__logo,
 .hero__label,
-.card__photo,
 .hero__photo,
 .release__year,
 .event__date {
@@ -119,7 +124,7 @@ nav a:focus-visible {
   text-shadow: 0 0 0.8rem var(--accent);
 }
 
-/* Секции (стопка из трёх слоёв) */
+/* ---------- Секции (стопка из трёх слоёв) ---------- */
 
 .sec {
   width: 80%;
@@ -136,16 +141,20 @@ nav a:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  scroll-margin-top: 6rem; 
+  scroll-margin-top: 6rem;
 }
 
 .sec__title {
   font-size: 0.875rem; /* 14px */
 }
 
+/* flow-root не даёт блоку схлопнуться вокруг обтекаемых картинок */
 .sec__content {
+  display: flow-root;
   width: 100%;
 }
+
+/* ---------- Герой ---------- */
 
 .sec--hero {
   justify-content: center;
@@ -186,7 +195,7 @@ nav a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  overflow: hidden;
   text-align: center;
   font-size: 0.6875rem;
   color: var(--white);
@@ -212,62 +221,7 @@ nav a:focus-visible {
   box-shadow: 3px 3px 0 var(--text);
 }
 
-/* Артисты */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
-  background: var(--white);
-  border: 5px solid var(--text);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.card:hover,
-.card:focus-within {
-  transform: translate(-3px, -3px);
-  box-shadow: 6px 6px 0 var(--text);
-}
-
-.card a {
-  display: block;
-  height: 100%;
-}
-
-.card__photo {
-  height: 9.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.625rem;
-  color: var(--white);
-  background: var(--head);
-  border-bottom: 5px solid var(--text);
-}
-
-.card:nth-child(3n + 2) .card__photo {
-  background: var(--sec2);
-}
-
-.card:nth-child(3n) .card__photo {
-  background: var(--sec3);
-}
-
-.card__name {
-  padding: 1rem 1rem 0.5rem;
-  font-size: 0.6875rem;
-}
-
-.card__genre {
-  padding: 0 1rem 1rem;
-  font-size: 0.9375rem;
-  color: var(--sec3);
-}
-
-/* Релизы */
+/* ---------- Релизы ---------- */
 
 .releases {
   display: flex;
@@ -299,6 +253,7 @@ nav a:focus-visible {
   flex: none;
   width: 4.5rem;
   height: 4.5rem;
+  overflow: hidden;
   background: var(--head);
   border: 5px solid var(--text);
 }
@@ -328,7 +283,7 @@ nav a:focus-visible {
   font-size: 0.625rem;
 }
 
-/* Афиша */
+/* ---------- Афиша ---------- */
 
 .events {
   display: grid;
@@ -372,7 +327,13 @@ nav a:focus-visible {
   color: var(--sec3);
 }
 
-/* О проекте */
+/* ---------- Фестивали ---------- */
+
+.festival__photo {
+  overflow: hidden;
+}
+
+/* ---------- О проекте ---------- */
 
 #about .sec__content p {
   max-width: 48rem;
@@ -380,7 +341,48 @@ nav a:focus-visible {
   line-height: 1.7;
 }
 
-/* Футер */
+/* ---------- Изображения ---------- */
+
+.hero__photo img,
+.festival__photo img,
+.release__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* картинка в тексте с подписью */
+.figure {
+  width: min(100%, 22rem);
+  margin: 0 0 1rem;
+  background: var(--white);
+  border: 5px solid var(--text);
+}
+
+.figure img {
+  width: 100%;
+}
+
+.figure figcaption,
+.label__photo figcaption {
+  padding: 0.5rem 0.75rem;
+  font-family: "Press", sans-serif;
+  font-size: 0.625rem; /* 10px: Press очень широкий */
+  line-height: 1.8;
+  color: var(--sec3);
+}
+
+.figure--right {
+  float: right;
+  margin-left: 1.5rem;
+}
+
+.figure--left {
+  float: left;
+  margin-right: 1.5rem;
+}
+
+/* ---------- Футер ---------- */
 
 .footer {
   margin-top: 6.5rem;
@@ -414,14 +416,29 @@ nav a:focus-visible {
   color: var(--accent);
 }
 
-/*  Фокус для клавиатуры */
+.footer__icon {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.375rem;
+  background-color: var(--white);
+  transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+.footer__links a:hover .footer__icon,
+.footer__links a:focus-visible .footer__icon {
+  transform: translate(-2px, -2px);
+  opacity: 0.8;
+}
+
+/* ---------- Фокус для клавиатуры ---------- */
 
 a:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
 
-/*  Адаптация */
+/* ---------- Адаптация ---------- */
 
 @media (max-width: 700px) {
   .sec {
@@ -442,102 +459,80 @@ a:focus-visible {
   nav {
     gap: 0.75rem 1.5rem;
   }
-}
 
-
-/* изображения */
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.hero__photo img,
-.card__photo img,
-.profile__photo img,
-.festival__photo img,
-.release__cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* герой */
-.hero__photo {
-  padding: 0;
-  overflow: hidden;
-}
-
-/* карточка артиста */
-.card__photo {
-  padding: 0;
-  overflow: hidden;
-}
-
-/* профиль артиста */
-.profile__photo {
-  overflow: hidden;
-}
-
-/* фестиваль */
-.festival__photo {
-  overflow: hidden;
-}
-
-/* обложка релиза */
-.release__cover {
-  overflow: hidden;
-}
-
-/* картинка в тексте с подписью */
-.figure {
-  width: min(100%, 22rem);
-  margin: 0 0 1rem;
-  background: var(--white);
-  border: 5px solid var(--text);
-}
-
-.figure img {
-  width: 100%;
-}
-
-.figure figcaption {
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
-  color: var(--sec3);
-}
-
-.figure--right {
-  float: right;
-  margin-left: 1.5rem;
-}
-
-.figure--left {
-  float: left;
-  margin-right: 1.5rem;
-}
-
-/* чтобы блок с обтекаемой картинкой не схлопывался */
-.sec__content::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.label__photo figcaption,
-.figure figcaption {
-  font-family: "Press", sans-serif;
-  font-size: 0.625rem;   /* 10px: Press очень широкий, крупнее подписи станут громоздкими */
-  line-height: 1.8;
-}
-
-/* на телефоне картинки в тексте уходят на всю ширину */
-@media (max-width: 700px) {
   .figure--right,
   .figure--left {
     float: none;
     width: 100%;
     margin-inline: 0;
   }
+}
+
+/* ---------- Карточки артистов и лейблов ---------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--white);
+  border: 5px solid var(--text);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--text);
+}
+
+.card a {
+  display: block;
+  height: 100%;
+}
+
+.card__photo {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Press", sans-serif;
+  font-size: 0.625rem;
+  color: var(--white);
+  background: var(--head);
+  border-bottom: 5px solid var(--text);
+}
+
+.card__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:nth-child(3n + 2) .card__photo {
+  background: var(--sec2);
+}
+
+.card:nth-child(3n) .card__photo {
+  background: var(--sec3);
+}
+
+.card__name {
+  padding: 1rem 1rem 0.5rem;
+  font-size: 0.6875rem;
+}
+
+.card__genre {
+  padding: 0 1rem 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--sec3);
+}
+
+.card__text {
+  padding: 0 1rem 1rem;
+  font-size: 0.9375rem;
 }

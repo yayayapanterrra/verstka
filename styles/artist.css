@@ -1,0 +1,102 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--white);
+  border: 5px solid var(--text);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--text);
+}
+
+.card a {
+  display: block;
+  height: 100%;
+}
+
+.card__photo {
+  height: 9.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Press", sans-serif;
+  font-size: 0.625rem;
+  color: var(--white);
+  background: var(--head);
+  border-bottom: 5px solid var(--text);
+}
+
+.card__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:nth-child(3n + 2) .card__photo {
+  background: var(--sec2);
+}
+
+.card:nth-child(3n) .card__photo {
+  background: var(--sec3);
+}
+
+.card__name {
+  padding: 1rem 1rem 0.5rem;
+  font-size: 0.6875rem;
+}
+
+.card__genre {
+  padding: 0 1rem 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--sec3);
+}
+
+.card__text {
+  padding: 0 1rem 1rem;
+  font-size: 0.9375rem;
+}
+
+/* ---------- Профиль артиста ---------- */
+
+.profile {
+  display: grid;
+  grid-template-columns: minmax(12rem, 18rem) 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.profile__photo {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--sec2);
+  border: 5px solid var(--text);
+}
+
+.profile__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile__info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (max-width: 700px) {
+  .profile {
+    grid-template-columns: 1fr;
+  }
+}

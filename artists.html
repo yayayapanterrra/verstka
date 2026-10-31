@@ -11,7 +11,7 @@
 
   <body>
     <header class="header">
-      <a class="logo" href="index.html" aria-label="ERUSSIA, на главную">
+      <a class="logo" href="index.html">
         <span class="logo__icon" aria-hidden="true">
           <span class="logo__cup logo__cup--left"></span>
           <span class="logo__cup logo__cup--right"></span>
@@ -19,7 +19,7 @@
         <span class="logo__text">ERUSSIA</span>
       </a>
 
-      <nav aria-label="Основное меню">
+      <nav>
         <a href="index.html">Главная</a>
         <a href="artists.html" aria-current="page">Артисты</a>
         <a href="festivals.html">Фестивали</a>
@@ -33,13 +33,13 @@
         <div class="sec__content">
           <ul class="cards">
             <li class="card">
-              <a href="elephant-trunk.html">
+              <a href="artists/labels/elephant/elephant-trunk.html">
                 <div class="card__photo">
                   <img
-                    src="images/elephant-trunk.jpg"
-                    alt="Вечеринка лейбла Elephant Trunk"
-                    width="400"
-                    height="300"
+                    src="images/logos/elephant.jpg"
+                    alt="Elephant Trunk"
+                    width=400
+                    height=300
                     loading="lazy"
                   />
                 </div>
@@ -54,8 +54,8 @@
               <a href="stvol.html">
                 <div class="card__photo">
                   <img
-                    src="images/stvol.jpg"
-                    alt="Вечеринка лейбла Ствол"
+                    src="images/logos/stvol.jpg"
+                    alt="Ствол"
                     width="400"
                     height="300"
                     loading="lazy"
@@ -72,8 +72,8 @@
               <a href="system108.html">
                 <div class="card__photo">
                   <img
-                    src="images/system108.jpg"
-                    alt="Вечеринка System 108"
+                    src="images/logos/system.jpg"
+                    alt="System 108"
                     width="400"
                     height="300"
                     loading="lazy"
@@ -88,36 +88,18 @@
               </a>
             </li>
             <li class="card">
-              <a href="disko-klub.html">
-                <div class="card__photo">
-                  <img
-                    src="images/disko-klub.jpg"
-                    alt="Вечеринка Диско Клуба"
-                    width="400"
-                    height="300"
-                    loading="lazy"
-                  />
-                </div>
-                <h2 class="card__name">ДИСКО КЛУБ</h2>
-                <p class="card__genre">Электроника</p>
-                <p class="card__text">
-                  Mirele, Рудольд Страусов, Казускома, Глум, Tapenight
-                </p>
-              </a>
-            </li>
-            <li class="card">
               <a href="gorkovskaya.html">
                 <div class="card__photo">
                   <img
-                    src="images/gorkovskaya.jpg"
-                    alt="Вечеринка «Станции метро Горьковская»"
+                    src="images/logos/gorkovskaya.jpg"
+                    alt="Станция метро Горьковская»"
                     width="400"
                     height="300"
                     loading="lazy"
                   />
                 </div>
                 <h2 class="card__name">СТАНЦИЯ МЕТРО ГОРЬКОВСКАЯ</h2>
-                <p class="card__genre">Нижний Новгород</p>
+                <p class="card__genre">Электронная музыка</p>
                 <p class="card__text">
                   Макс Буяков, DJ Kras, Антон Бардин, Call Me Ilya, camznaew
                 </p>
@@ -252,9 +234,36 @@
     <footer class="footer">
       <span class="footer__logo">ERUSSIA</span>
       <ul class="footer__links">
-        <li><a href="#">[Telegram]</a></li>
-        <li><a href="#">[VK]</a></li>
-        <li><a href="#">[Почта]</a></li>
+        <li>
+          <a href="https://t.me/..."
+            ><img
+              class="footer__icon"
+              src="images/icons/telegram.svg"
+              alt="Telegram"
+              width="32"
+              height="32"
+          /></a>
+        </li>
+        <li>
+          <a href="https://vk.com/..."
+            ><img
+              class="footer__icon"
+              src="images/icons/vk.svg"
+              alt="ВКонтакте"
+              width="32"
+              height="32"
+          /></a>
+        </li>
+        <li>
+          <a href="mailto:..."
+            ><img
+              class="footer__icon"
+              src="images/icons/mail.svg"
+              alt="Почта"
+              width="32"
+              height="32"
+          /></a>
+        </li>
       </ul>
     </footer>
   </body>

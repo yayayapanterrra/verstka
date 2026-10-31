@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ERUSSIA — электронная сцена России</title>
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/logo.css" />
     <link rel="stylesheet" href="styles/index.css" />
@@ -12,15 +12,15 @@
 
   <body>
     <header class="header">
-      <a class="logo" href="index.html" aria-label="ERUSSIA, на главную">
-        <span class="logo__icon" aria-hidden="true">
+      <a class="logo" href="index.html">
+        <span class="logo__icon">
           <span class="logo__cup logo__cup--left"></span>
           <span class="logo__cup logo__cup--right"></span>
         </span>
         <span class="logo__text">ERUSSIA</span>
       </a>
 
-      <nav aria-label="Основное меню">
+      <nav>
         <a href="index.html" aria-current="page">Главная</a>
         <a href="artists.html">Артисты</a>
         <a href="festivals.html">Фестивали</a>
@@ -215,9 +215,36 @@
     <footer class="footer">
       <span class="footer__logo">ERUSSIA</span>
       <ul class="footer__links">
-        <li><a href="#">[Telegram]</a></li>
-        <li><a href="#">[VK]</a></li>
-        <li><a href="#">[Почта]</a></li>
+        <li>
+          <a href="https://t.me/..."
+            ><img
+              class="footer__icon"
+              src="images/icons/telegram.svg"
+              alt="Telegram"
+              width="32"
+              height="32"
+          /></a>
+        </li>
+        <li>
+          <a href="https://vk.com/..."
+            ><img
+              class="footer__icon"
+              src="images/icons/vk.svg"
+              alt="ВКонтакте"
+              width="32"
+              height="32"
+          /></a>
+        </li>
+        <li>
+          <a href="mailto:..."
+            ><img
+              class="footer__icon"
+              src="images/icons/mail.svg"
+              alt="Почта"
+              width="32"
+              height="32"
+          /></a>
+        </li>
       </ul>
     </footer>
   </body>
