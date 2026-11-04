@@ -114,8 +114,4 @@
   .profile {
     grid-template-columns: 1fr;
   }
-
-  .player iframe {
-    height: 150px;
-  }
 }
