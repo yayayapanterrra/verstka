@@ -33,7 +33,7 @@
     border: 0.06em solid var(--text);
     border-radius: 0.08em;
     transform-origin: center;
-    will-change: transform;   /* чашка рисуется один раз, а потом только масштабируется */
+    will-change: transform;   
 }
 
 .logo__cup--left {
