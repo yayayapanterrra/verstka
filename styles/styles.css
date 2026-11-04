@@ -51,9 +51,13 @@ p {
   margin: 0;
 }
 
+img,
+iframe {
+  max-width: 100%;
+}
+
 img {
   display: block;
-  max-width: 100%;
   height: auto;
 }
 
@@ -65,14 +69,12 @@ nav a,
 .logo__text,
 .footer__logo,
 .hero__label,
-.hero__photo,
-.release__year,
-.event__date {
+.hero__photo {
   font-family: "Press", sans-serif;
   line-height: 1.6;
 }
 
-/* ---------- Шапка ---------- */
+/*  Шапка  */
 
 .header {
   position: sticky;
@@ -124,11 +126,12 @@ nav a:focus-visible {
   text-shadow: 0 0 0.8rem var(--accent);
 }
 
-/* ---------- Секции (стопка из трёх слоёв) ---------- */
+/*  Секции (стопка из трёх слоёв)  */
 
 .sec {
   width: 80%;
   min-height: 25rem;
+  min-width: 0;
   margin: 5rem auto 0;
   padding: 2.5rem 3rem 3rem;
   background: var(--sec1);
@@ -142,6 +145,13 @@ nav a:focus-visible {
   flex-direction: column;
   gap: 2rem;
   scroll-margin-top: 6rem;
+  overflow-wrap: anywhere; /* длинные слова переносятся, а не вылезают */
+}
+
+/* всё, что лежит прямо в секции, может сжиматься и не шире секции */
+.sec > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .sec__title {
@@ -152,9 +162,10 @@ nav a:focus-visible {
 .sec__content {
   display: flow-root;
   width: 100%;
+  min-width: 0;
 }
 
-/* ---------- Герой ---------- */
+/*  Герой  */
 
 .sec--hero {
   justify-content: center;
@@ -169,6 +180,7 @@ nav a:focus-visible {
 
 .hero__text {
   flex: 1 1 24rem;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -190,7 +202,7 @@ nav a:focus-visible {
 
 .hero__photo {
   flex: 0 1 18rem;
-  min-width: 14rem;
+  min-width: min(14rem, 100%);
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
@@ -221,131 +233,86 @@ nav a:focus-visible {
   box-shadow: 3px 3px 0 var(--text);
 }
 
-/* ---------- Релизы ---------- */
+/*  Карточки артистов и лейблов  */
 
-.releases {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.release {
-  background: var(--white);
-  border: 5px solid var(--text);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.release:hover,
-.release:focus-within {
-  transform: translate(-3px, -3px);
-  box-shadow: 6px 6px 0 var(--text);
-}
-
-.release a {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.75rem;
-}
-
-.release__cover {
-  flex: none;
-  width: 4.5rem;
-  height: 4.5rem;
-  overflow: hidden;
-  background: var(--head);
-  border: 5px solid var(--text);
-}
-
-.release:nth-child(even) .release__cover {
-  background: var(--sec3);
-}
-
-.release__info {
-  flex: 1 1 12rem;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.release__title {
-  font-size: 0.6875rem;
-}
-
-.release__artist {
-  font-size: 0.9375rem;
-  color: var(--sec3);
-}
-
-.release__year {
-  font-size: 0.625rem;
-}
-
-/* ---------- Афиша ---------- */
-
-.events {
+.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
   gap: 1.5rem;
 }
 
-.event {
+.card {
+  min-width: 0;
   background: var(--white);
   border: 5px solid var(--text);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.event:hover,
-.event:focus-within {
+.card:hover,
+.card:focus-within {
   transform: translate(-3px, -3px);
   box-shadow: 6px 6px 0 var(--text);
 }
 
-.event a {
+.card a {
   display: block;
   height: 100%;
 }
 
-.event__date {
-  display: block;
-  padding: 1rem;
-  font-size: 0.75rem;
-  background: var(--accent);
+.card__photo {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Press", sans-serif;
+  font-size: 0.625rem;
+  color: var(--white);
+  background: var(--head);
   border-bottom: 5px solid var(--text);
 }
 
-.event__title {
+.card:nth-child(3n + 2) .card__photo {
+  background: var(--sec2);
+}
+
+.card:nth-child(3n) .card__photo {
+  background: var(--sec3);
+}
+
+.card__name {
   padding: 1rem 1rem 0.5rem;
   font-size: 0.6875rem;
 }
 
-.event__place {
-  padding: 0 1rem 1rem;
+.card__genre {
+  padding: 0 1rem 0.5rem;
   font-size: 0.9375rem;
   color: var(--sec3);
 }
 
-/* ---------- Фестивали ---------- */
+.card__text {
+  padding: 0 1rem 1rem;
+  font-size: 0.9375rem;
+}
+
+/* заголовок на странице артиста */
+.profile__info h1 {
+  font-size: clamp(1.125rem, 5vw, 1.75rem);
+  line-height: 1.4;
+}
+
+/*  Фестивали  */
 
 .festival__photo {
   overflow: hidden;
 }
 
-/* ---------- О проекте ---------- */
-
-#about .sec__content p {
-  max-width: 48rem;
-  font-size: 1.125rem;
-  line-height: 1.7;
-}
-
-/* ---------- Изображения ---------- */
+/*  Изображения  */
 
 .hero__photo img,
-.festival__photo img,
-.release__cover img {
+.card__photo img,
+.festival__photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -382,7 +349,7 @@ nav a:focus-visible {
   margin-right: 1.5rem;
 }
 
-/* футер */
+/*  Футер  */
 
 .footer {
   margin-top: 6.5rem;
@@ -431,14 +398,14 @@ nav a:focus-visible {
   opacity: 0.8;
 }
 
-/* ---------- Фокус для клавиатуры ---------- */
+/*  Фокус для клавиатуры  */
 
 a:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
 
-/* ---------- Адаптация ---------- */
+/*  Адаптация  */
 
 @media (max-width: 700px) {
   .sec {
@@ -466,79 +433,4 @@ a:focus-visible {
     width: 100%;
     margin-inline: 0;
   }
-}
-
-/* ---------- Карточки артистов и лейблов ---------- */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
-  background: var(--white);
-  border: 5px solid var(--text);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.card:hover,
-.card:focus-within {
-  transform: translate(-3px, -3px);
-  box-shadow: 6px 6px 0 var(--text);
-}
-
-.card a {
-  display: block;
-  height: 100%;
-}
-
-.card__photo {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Press", sans-serif;
-  font-size: 0.625rem;
-  color: var(--white);
-  background: var(--head);
-  border-bottom: 5px solid var(--text);
-}
-
-.card__photo img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card:nth-child(3n + 2) .card__photo {
-  background: var(--sec2);
-}
-
-.card:nth-child(3n) .card__photo {
-  background: var(--sec3);
-}
-
-.card__name {
-  padding: 1rem 1rem 0.5rem;
-  font-size: 0.6875rem;
-}
-
-.card__genre {
-  padding: 0 1rem 0.5rem;
-  font-size: 0.9375rem;
-  color: var(--sec3);
-}
-
-.card__text {
-  padding: 0 1rem 1rem;
-  font-size: 0.9375rem;
-}
-
-.profile__info h1 {
-  font-size: clamp(1.125rem, 5vw, 1.75rem);
-  line-height: 1.4;
-  overflow-wrap: anywhere;
 }
