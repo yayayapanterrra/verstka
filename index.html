@@ -9,19 +9,30 @@
     <link rel="stylesheet" href="styles/logo.css" />
     <link rel="stylesheet" href="styles/index.css" />
   </head>
-
   <body>
     <header class="header">
       <a class="logo" href="index.html">
-        <span class="logo__icon">
+        <span class="logo__icon" aria-hidden="true">
           <span class="logo__cup logo__cup--left"></span>
           <span class="logo__cup logo__cup--right"></span>
         </span>
         <span class="logo__text">ERUSSIA</span>
       </a>
 
-      <nav>
-        <a href="index.html" aria-current="page">Главная</a>
+      <button
+        class="burger"
+        type="button"
+        aria-label="Меню"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        <span class="burger__bar"></span>
+        <span class="burger__bar"></span>
+        <span class="burger__bar"></span>
+      </button>
+
+      <nav id="menu">
+        <a href="index.html">Главная</a>
         <a href="artists.html">Артисты</a>
         <a href="festivals.html">Фестивали</a>
         <a href="tasks.html">Задания</a>
@@ -103,7 +114,9 @@
               Onebyone и MAGE. А ещё у них свои вечеринки, например Label Night
               2.0 и «Свежая Кровь».
             </p>
-            <a class="btn" href="artists/labels/elephant/elephant-trunk.html">АРТИСТЫ ЛЕЙБЛА</a>
+            <a class="btn" href="artists/labels/elephant/elephant-trunk.html"
+              >АРТИСТЫ ЛЕЙБЛА</a
+            >
           </div>
         </div>
       </section>
@@ -136,7 +149,9 @@
               Здесь выходят Cream Soda, «Лучший Друг», «Лауд», Ella и Lurmish.
               Жанры разные: от «умной электроники» до попа и хип-хопа.
             </p>
-            <a class="btn" href="artists/labels/stvol/stvol.html">АРТИСТЫ ЛЕЙБЛА</a>
+            <a class="btn" href="artists/labels/stvol/stvol.html"
+              >АРТИСТЫ ЛЕЙБЛА</a
+            >
           </div>
         </div>
       </section>
@@ -170,7 +185,9 @@
               а ещё у них есть проект «Диско Клуб», который сделан вместе с
               фотостудией White Studios.
             </p>
-            <a class="btn" href="artists/labels/system/system.html">АРТИСТЫ ЛЕЙБЛА</a>
+            <a class="btn" href="artists/labels/system/system.html"
+              >АРТИСТЫ ЛЕЙБЛА</a
+            >
           </div>
         </div>
       </section>
@@ -211,5 +228,8 @@
         </li>
       </ul>
     </footer>
+
+    <script src="scripts/menu.js"></script>
+
   </body>
 </html>

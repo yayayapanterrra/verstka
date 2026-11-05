@@ -126,7 +126,88 @@ nav a:focus-visible {
   text-shadow: 0 0 0.8rem var(--accent);
 }
 
-/*  Секции (стопка из трёх слоёв)  */
+/*  Бургер-меню  */
+
+.burger {
+  display: none;
+  flex: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.375rem;
+  background: var(--accent);
+  border: 5px solid var(--text);
+  cursor: pointer;
+}
+
+.burger__bar {
+  display: block;
+  height: 0.25rem;
+  background: var(--text);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.burger:hover,
+.burger:focus-visible {
+  box-shadow: 3px 3px 0 var(--text);
+}
+
+.burger:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 3px;
+}
+
+/* три полоски превращаются в крестик */
+.burger[aria-expanded="true"] .burger__bar:nth-child(1) {
+  transform: translateY(0.5rem) rotate(45deg);
+}
+
+.burger[aria-expanded="true"] .burger__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger[aria-expanded="true"] .burger__bar:nth-child(3) {
+  transform: translateY(-0.5rem) rotate(-45deg);
+}
+
+/* текущая страница */
+nav a[aria-current="page"] {
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .header--js .burger {
+    display: flex;
+  }
+
+  /* меню скрыто, пока не нажали на кнопку */
+  .header--js nav {
+    display: none;
+    flex: 1 0 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header--js nav.is-open {
+    display: flex;
+  }
+
+  .header--js nav a {
+    padding: 0.875rem 0;
+    border-top: 3px solid var(--sec3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .burger__bar {
+    transition: none;
+  }
+}
+
+
+/*  Секции  */
 
 .sec {
   width: 80%;
